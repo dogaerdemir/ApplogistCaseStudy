@@ -13,6 +13,11 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+    }
+    
+    
+    func setupViews() {
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -28,6 +33,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationItem.leftBarButtonItem = leftButton
     }
     
+    
     @objc func dismissPage() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -37,15 +43,13 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 3 // geçici
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! FoodTableViewCell
-        
         return cell
     }
     

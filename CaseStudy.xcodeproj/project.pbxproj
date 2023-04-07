@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA9C69D229E0441900947CCD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA9C69D129E0441900947CCD /* Alamofire */; };
 		DAA524C029DF89DB005FDA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524BF29DF89DB005FDA40 /* AppDelegate.swift */; };
 		DAA524C229DF89DB005FDA40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524C129DF89DB005FDA40 /* SceneDelegate.swift */; };
 		DAA524C429DF89DB005FDA40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524C329DF89DB005FDA40 /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		DAA524C929DF89DD005FDA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA524C829DF89DD005FDA40 /* Assets.xcassets */; };
 		DAA524CC29DF89DD005FDA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA524CA29DF89DD005FDA40 /* LaunchScreen.storyboard */; };
 		DAA524D729DF8B1F005FDA40 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524D629DF8B1F005FDA40 /* Model.swift */; };
-		DAA524D929DF8B7E005FDA40 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524D829DF8B7E005FDA40 /* Webservice.swift */; };
 		DAA524DB29DF8B88005FDA40 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524DA29DF8B88005FDA40 /* ViewModel.swift */; };
 		DAA524DD29DF8B93005FDA40 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524DC29DF8B93005FDA40 /* CartViewModel.swift */; };
 		DAA524DF29DF8C13005FDA40 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524DE29DF8C13005FDA40 /* CartViewController.swift */; };
@@ -32,7 +32,6 @@
 		DAA524CB29DF89DD005FDA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA524CD29DF89DD005FDA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA524D629DF8B1F005FDA40 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		DAA524D829DF8B7E005FDA40 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		DAA524DA29DF8B88005FDA40 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DAA524DC29DF8B93005FDA40 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		DAA524DE29DF8C13005FDA40 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9C69D229E0441900947CCD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,6 @@
 		DAA524D529DF8B00005FDA40 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DAA524D829DF8B7E005FDA40 /* Webservice.swift */,
 				DAA524DA29DF8B88005FDA40 /* ViewModel.swift */,
 				DAA524DC29DF8B93005FDA40 /* CartViewModel.swift */,
 			);
@@ -128,6 +127,9 @@
 			dependencies = (
 			);
 			name = CaseStudy;
+			packageProductDependencies = (
+				DA9C69D129E0441900947CCD /* Alamofire */,
+			);
 			productName = CaseStudy;
 			productReference = DAA524BC29DF89DB005FDA40 /* CaseStudy.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +158,9 @@
 				Base,
 			);
 			mainGroup = DAA524B329DF89DB005FDA40;
+			packageReferences = (
+				DA9C69D029E0441900947CCD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DAA524BD29DF89DB005FDA40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,7 +194,6 @@
 				DAA524DD29DF8B93005FDA40 /* CartViewModel.swift in Sources */,
 				DAA524C229DF89DB005FDA40 /* SceneDelegate.swift in Sources */,
 				DAA524DF29DF8C13005FDA40 /* CartViewController.swift in Sources */,
-				DAA524D929DF8B7E005FDA40 /* Webservice.swift in Sources */,
 				DAA524DB29DF8B88005FDA40 /* ViewModel.swift in Sources */,
 				DAA524D729DF8B1F005FDA40 /* Model.swift in Sources */,
 				DAA524E129DF8C2C005FDA40 /* FoodTableViewCell.swift in Sources */,
@@ -410,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA9C69D029E0441900947CCD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA9C69D129E0441900947CCD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9C69D029E0441900947CCD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAA524B429DF89DB005FDA40 /* Project object */;
 }
