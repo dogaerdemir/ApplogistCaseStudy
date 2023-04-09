@@ -26,7 +26,7 @@ class ViewModel {
                 
                 case .failure(let error):
                     print(error.localizedDescription)
-                }
+            }
 
         }
     }

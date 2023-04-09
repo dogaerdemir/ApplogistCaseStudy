@@ -72,7 +72,7 @@
                                                         <action selector="minusButtonClicked:" destination="Vu4-G0-4e0" eventType="touchUpInside" id="S8K-0W-ESI"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-OM-ZnK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-OM-ZnK">
                                                     <rect key="frame" x="125" y="0.0" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.75294119120000003" green="0.87450981139999995" blue="0.90980386729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -143,6 +143,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Sepeti Onayla">
                                             <backgroundConfiguration key="background" cornerRadius="0.0"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="confirmButtonClicked:" destination="c3K-Yy-plm" eventType="touchUpInside" id="2B7-2V-xRQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5399527027002099" green="0.76942896842956543" blue="0.54411198037675956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -189,6 +192,9 @@
                                                         <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
                                                         <backgroundConfiguration key="background" cornerRadius="0.0"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="plusButtonClicked:" destination="5LA-5J-nXw" eventType="touchUpInside" id="xnW-uh-d7i"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3p-fE-NJd">
                                                     <rect key="frame" x="281" y="55.666666666666657" width="31" height="31"/>
@@ -201,6 +207,9 @@
                                                         <imageReference key="image" image="minus" catalog="system" symbolScale="small"/>
                                                         <backgroundConfiguration key="background" cornerRadius="0.0"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="minusButtonClicked:" destination="5LA-5J-nXw" eventType="touchUpInside" id="GOn-6A-DnY"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-wF-AxR">
                                                     <rect key="frame" x="313" y="55.666666666666657" width="31" height="31"/>
@@ -241,6 +250,14 @@
                                                 <constraint firstItem="4T3-Fz-jJl" firstAttribute="leading" secondItem="aQK-Hn-Qui" secondAttribute="trailing" constant="18" id="xZu-F4-jOF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tableViewCountLabel" destination="Tif-wF-AxR" id="08m-xi-ett"/>
+                                            <outlet property="tableViewImageView" destination="aQK-Hn-Qui" id="cL7-U7-VHO"/>
+                                            <outlet property="tableViewMinusButton" destination="L3p-fE-NJd" id="mK9-iw-9ot"/>
+                                            <outlet property="tableViewNameLabel" destination="GXf-vd-gLY" id="zSh-5s-U1O"/>
+                                            <outlet property="tableViewPlusButton" destination="kAn-tV-nfL" id="RyY-Y6-vdW"/>
+                                            <outlet property="tableViewPriceLabel" destination="4T3-Fz-jJl" id="bqr-c9-afK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -261,7 +278,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sepet" id="msR-ja-mrg"/>
                     <connections>
+                        <outlet property="confirmButton" destination="srp-DO-SOi" id="o23-wt-BC3"/>
                         <outlet property="tableView" destination="wkr-Uf-nC6" id="tWx-7B-BIc"/>
+                        <outlet property="totalPriceLabel" destination="HrF-df-5we" id="PYJ-8M-IQe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imx-pD-kEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

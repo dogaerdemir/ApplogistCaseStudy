@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA5C7FDE29E2373B002B7719 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C7FDD29E2373B002B7719 /* Order.swift */; };
 		DA9C69D229E0441900947CCD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA9C69D129E0441900947CCD /* Alamofire */; };
 		DAA524C029DF89DB005FDA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524BF29DF89DB005FDA40 /* AppDelegate.swift */; };
 		DAA524C229DF89DB005FDA40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524C129DF89DB005FDA40 /* SceneDelegate.swift */; };
@@ -20,9 +21,11 @@
 		DAA524DF29DF8C13005FDA40 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524DE29DF8C13005FDA40 /* CartViewController.swift */; };
 		DAA524E129DF8C2C005FDA40 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524E029DF8C2C005FDA40 /* FoodTableViewCell.swift */; };
 		DAA524E329DF8C41005FDA40 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA524E229DF8C41005FDA40 /* FoodCollectionViewCell.swift */; };
+		DAF17EB029E2FD1C00AA887E /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF17EAF29E2FD1C00AA887E /* Total.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA5C7FDD29E2373B002B7719 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		DAA524BC29DF89DB005FDA40 /* CaseStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA524BF29DF89DB005FDA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA524C129DF89DB005FDA40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		DAA524DE29DF8C13005FDA40 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DAA524E029DF8C2C005FDA40 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		DAA524E229DF8C41005FDA40 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAF17EAF29E2FD1C00AA887E /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				DAA524D629DF8B1F005FDA40 /* Model.swift */,
+				DA5C7FDD29E2373B002B7719 /* Order.swift */,
+				DAF17EAF29E2FD1C00AA887E /* Total.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,10 +100,9 @@
 		DAA524D429DF8AFC005FDA40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAF17EB129E3183E00AA887E /* Cell */,
 				DAA524C329DF89DB005FDA40 /* ViewController.swift */,
 				DAA524DE29DF8C13005FDA40 /* CartViewController.swift */,
-				DAA524E029DF8C2C005FDA40 /* FoodTableViewCell.swift */,
-				DAA524E229DF8C41005FDA40 /* FoodCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +114,15 @@
 				DAA524DC29DF8B93005FDA40 /* CartViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAF17EB129E3183E00AA887E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DAA524E029DF8C2C005FDA40 /* FoodTableViewCell.swift */,
+				DAA524E229DF8C41005FDA40 /* FoodCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,8 @@
 				DAA524C429DF89DB005FDA40 /* ViewController.swift in Sources */,
 				DAA524C029DF89DB005FDA40 /* AppDelegate.swift in Sources */,
 				DAA524DD29DF8B93005FDA40 /* CartViewModel.swift in Sources */,
+				DA5C7FDE29E2373B002B7719 /* Order.swift in Sources */,
+				DAF17EB029E2FD1C00AA887E /* Total.swift in Sources */,
 				DAA524C229DF89DB005FDA40 /* SceneDelegate.swift in Sources */,
 				DAA524DF29DF8C13005FDA40 /* CartViewController.swift in Sources */,
 				DAA524DB29DF8B88005FDA40 /* ViewModel.swift in Sources */,
