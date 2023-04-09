@@ -27,7 +27,3 @@ struct Total {
         Total.price = 0
     }
 }
-
-
-
-

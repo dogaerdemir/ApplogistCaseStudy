@@ -40,8 +40,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         button.addTarget(self, action: #selector((goToCart)), for: .touchUpInside)
         button.frame = CGRect(x: 0, y: 0, width: 53, height: 31)
 
-        navBarLabel = UILabel(frame: CGRect(x: 15, y: -5, width: 50, height: 20))// set position of label
-        navBarLabel.font = UIFont(name: "Arial-BoldMT", size: 16)// add font and size of label
+        navBarLabel = UILabel(frame: CGRect(x: 15, y: -5, width: 50, height: 20))
+        navBarLabel.font = UIFont(name: "Arial-BoldMT", size: 16)
         navBarLabel.text = String(foodListFromApi.filter { $0.currentCount != 0 }.count)
         navBarLabel.textAlignment = .center
         navBarLabel.textColor = UIColor.blue
@@ -52,16 +52,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
         
-        let tasarim : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let ekranGenislik = self.collectionView.frame.size.width
-        let hucreGenislik = (ekranGenislik - 30) / 2
+        let design : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let screenWidth = self.collectionView.frame.size.width
+        let cellWidth = (screenWidth - 30) / 2
         
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        tasarim.minimumInteritemSpacing = 5
-        tasarim.minimumLineSpacing = 50
-        tasarim.itemSize = CGSize(width: hucreGenislik, height: hucreGenislik * 1.1)
+        design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        design.minimumInteritemSpacing = 5
+        design.minimumLineSpacing = 50
+        design.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.1)
         
-        collectionView.collectionViewLayout = tasarim
+        collectionView.collectionViewLayout = design
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -84,24 +84,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func increaseCart(indexPath: IndexPath) {
-        let urun = foodListFromApi[indexPath.row]
+        let product = foodListFromApi[indexPath.row]
         
-        if urun.currentCount < urun.stock {
-            urun.increaseCurrentCount()
+        if product.currentCount < product.stock {
+            product.increaseCurrentCount()
             updateTitleOnNavBar(title: String(foodListFromApi.filter { $0.currentCount != 0 }.count))
-            Total.increaseTotalPrice(d:urun.price)
+            Total.increaseTotalPrice(d:product.price)
             collectionView.reloadItems(at: [indexPath])
         } else {
-            self.showToast(message: "Maksimum \(urun.name) stoğuna ulaşıldı", width: 300)
+            self.showToast(message: "Maksimum \(product.name) stoğuna ulaşıldı", width: 300)
         }
     }
     
     func decreaseCart(indexPath: IndexPath) {
-        let urun = foodListFromApi[indexPath.row]
-        urun.decreaseCurrentCount()
+        let product = foodListFromApi[indexPath.row]
+        product.decreaseCurrentCount()
         updateTitleOnNavBar(title: String(foodListFromApi.filter { $0.currentCount != 0 }.count))
         collectionView.reloadItems(at: [indexPath])
-        Total.decreaseTotalPrice(d: urun.price)
+        Total.decreaseTotalPrice(d: product.price)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
