@@ -16,7 +16,7 @@ class CartViewModel {
     }
     
     func sendProducts(dataStr:[FoodModel], handler:@escaping(_ result:Order)->Void) {
-        var dict = [FoodModel:Int]()
+        var dict = [FoodModel:Int]() // dict
         
         for food in dataStr {
             dict[food] = food.currentCount
